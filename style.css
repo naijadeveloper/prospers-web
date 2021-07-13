@@ -1,0 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: calibri;
+}
+
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #333;
+  --anchor: #444;
+}
+
+h1, p, span {
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 250px;
+}
