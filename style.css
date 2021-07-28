@@ -8,6 +8,7 @@
 :root {
   --primary-color: #fff;
   --secondary-color: #333;
+  --big-text-color: seagreen;
   --anchor: #444;
 }
 
@@ -34,8 +35,9 @@ body {
   left: 0;
   z-index: 1;
 
-  width: 98.8%;
-  margin: 0 auto;
+  width: 97%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
 
   display: flex;
   justify-content: flex-end;
@@ -56,8 +58,22 @@ body {
 
     transform: translateY(-200px);
     animation: slide-down 1s 1s forwards;
+  }
 
-    /* border: 1px solid rebeccapurple; */
+  .name img.show-menu, .name img.close-menu {
+    display: none;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12%;
+    right: 5px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .name img.close-menu {
+    display: none;
   }
 
   .menu-list {
@@ -179,7 +195,6 @@ main {
 
   overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
   main > section {
@@ -188,8 +203,6 @@ main {
     overflow: hidden;
 
     background-color:#CED0CB;
-    
-    scroll-snap-align: center;
   }
 
 /*  ABOUT-SECTION */
@@ -198,10 +211,7 @@ main {
     background-repeat: no-repeat;
     background-position-y: -120px;
     background-attachment: fixed;
-    background-blend-mode: normal;
     background-size: 65%;
-
-    overflow-x: hidden;
 
     animation: slide-in 1s forwards;
   }
@@ -228,9 +238,22 @@ main {
         animation: text-slide-from-right 1s 2s forwards;
       }
 
+      .about-section-wrapper div {
+        display: none;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        border: 5px solid #eee;
+        background-image: url("imisi-photo.jpg");
+        background-repeat: no-repeat;
+        background-position-x: -200px;
+        background-position-y: -60px;
+        background-size: 260%;
+      }
+
       .about-section-wrapper h1 {
         width: 40%;
-        font-size: 70px;
+        font-size: 60px;
         color: seagreen;
       }
 
@@ -244,34 +267,41 @@ main {
 
 /* SECTIONS' BASE STYLES from the services section to contacts */
 .section {
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
   .section-title {
     width: 70%;
     margin: 0 auto;
-    font-size: 80px;
+    font-size: 60px;
+    text-transform: uppercase;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #666;
+    color: seagreen;
 
     position: relative;
 
     /* border: 1px solid red; */
   }
 
-  .section-title:before, .section-title:after {
-    content: "";
-    width: 50px;
-    height: 2px;
-    background-color: #000;
-    
-    position: absolute;
+  .section-description {
+    width: 50%;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+
+    /* border: 1px solid red; */
   }
 
-  .section-title:before {top: 50%; transform: translateX(-50px)}
-  .section-title:after {top: 50%;}
+    .section-description span {
+      font-weight: bold;
+      font-size: 20px;
+    }
 
 
 /* SERVICES-SECTION AND RECENTS-SECTION SHARED STYLES */
@@ -281,7 +311,7 @@ main {
   justify-content: center;
   align-items: center;
   
-  margin-top: 50px;
+  margin-top: 30px;
 
   /* border: 1px solid blue; */
 }
@@ -292,7 +322,7 @@ main {
     padding: 10px;
     margin: 10px;
 
-    background-color: #fff;
+    background-color: #eee;
     border-radius: 5px;
 
     display: flex;
@@ -320,11 +350,211 @@ main {
   /* border: 1px solid orange; */
 }
 
+/* TESTIMONIAL SECTION */
+.testimonials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  /* border: 1px solid red; */
+}
+
+  .testimonial-item {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+
+    /* border: 1px solid blue; */
+  }
+
+    .testimonial-item > p {
+      font-size: 25px;
+      font-style: italic;
+      font-weight: lighter;
+      padding: 5px;
+    }
+
+    .about-the-testimonial {
+      margin: 5px;
+      display: flex;
+
+      /* border: 1px solid green; */
+    }
+
+      .about-the-testimonial > * {
+        margin: 5px;
+
+        /* border: 1px solid purple */
+      }
+
+      .about-the-testimonial > div {
+        width: 130px;
+        min-height: 110px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about-the-testimonial img {
+        width: 120px;
+      }
+
+      .about-the-testimonial > p {
+        display: flex;
+        flex-flow: column;
+      }
+
+        .about-the-testimonial > p span:first-child {
+          font-size: 25px;
+          font-weight: bolder;
+          color: seagreen;
+          text-transform: uppercase;
+        }
+
+        .about-the-testimonial > p span:last-child {
+          font-size: 20px;
+        }
+
+.book-session {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  /* border: 1px solid red; */
+}
+
+  .book-session-div {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    background-color: #eee;
+
+    /* border: 1px solid orangered; */
+  }
+
+    .book-session label {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .book-session label[for*="user"], .book-session label[for="more-outfit"], .book-session label[for="shoot-date"], .book-session label[for="msg-pri-deliverables"], label[for="shoot-date"], .book-session label[for="instagram-handle"], .book-session label[for="shoot-loko"], .book-session label[for="where-info"] {
+      flex-flow: column;
+      align-items: flex-start;
+    }
+
+      .book-session span, .book-session p {
+        color: #333;
+        font-weight: bold;
+        margin: 2px;
+
+        /* border: 1px solid red; */
+      }
+
+      .book-session p {
+        margin-top: 20px;
+      }
+
+
+      .book-session input[type="text"], .book-session input[type="number"], .book-session input[type="email"] {
+        -webkit-appearance: none;
+        width: 100%;
+        min-height: 25px;
+        padding: 2px;
+        padding-left: 5px;
+        border: none;
+        background-color: #666;
+        border-radius: 2px;
+        background-color: none;
+        font-size: 20px;
+        color: #fff;
+      }
+
+      .book-session select {
+        width: 100%;
+        min-height: 25px;
+        padding: 2px;
+        padding-left: 5px;
+        border: none;
+        background-color: #666;
+        border-radius: 2px;
+        font-size: 20px;
+        color: #fff;
+      }
+
+      .book-session textarea {
+        width: 100%;
+        border: none;
+        padding: 2px;
+        padding-left: 5px;
+        font-size: 18px;
+        background-color: #666;
+        color: #fff;
+      }
+
+      .book-session textarea::placeholder {
+        color: #fff;
+        font-style: italic;
+      }
+    
+    .book-session button {
+      width: 250px;
+      margin: 0 auto;
+      border: none;
+      border-radius: 2px;
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      text-align: center;
+    }
 
 
 
+/* change to header on scroll down and scroll up */
+.page-header-change {
+  /*  */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #CED0CB;
+  padding: 10px 5px 10px 5px;
+}
 
+.name-change {
+  /*  */
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 
+  transform: translateY(0px);
+  animation: unset;
+}
+
+.name-span-change {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bolder;
+}
+
+.menu-list-change {
+  padding: 0;
+  opacity: 1;
+  animation: unset;
+}
+/* ... */
 
 /* keyframes */
 @keyframes slide-in {
@@ -364,39 +594,3 @@ main {
   }
 }
 /*  */
-
-
-/* change to header on scroll down and scroll up */
-.page-header-change {
-  /*  */
-  justify-content: space-between;
-  align-items: center;
-  background-color: #CED0CB;
-  padding: 10px 5px 10px 5px;
-}
-
-.name-change {
-  /*  */
-  top: 0;
-  left: 0;
-  font-size: 30px;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-
-  transform: translateY(0px);
-  animation: unset;
-}
-
-.name-span-change {
-  margin-left: 5px;
-  margin-right: 5px;
-  font-weight: bolder;
-}
-
-.menu-list-change {
-  padding: 0;
-  opacity: 1;
-  animation: unset;
-}
-/* ... */

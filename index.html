@@ -7,13 +7,16 @@
 
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
   <header class="page-header">
     <h1 class="name">
-      <span>imisioluwa</span>
-      <span>photography</span>
+      <span class="name-span">imisioluwa</span>
+      <span class="name-span">photography</span>
+      <img src="icons8-menu-24.png" alt="open menu icon" class="show-menu">
+      <img src="icons8-macos-close-24.png" alt="close menu icon" class="close-menu">
     </h1>
     <ul class="menu-list">
       <li class="about">
@@ -45,22 +48,22 @@
         <a href="">X</a>
       </li>
       <li class="editorials">
-        <a href="#">Editorials</a>
+        <a href="comingsoon.html">Editorials</a>
       </li>
       <li class="portraits">
-        <a href="#">Portraits</a>
+        <a href="comingsoon.html">Portraits</a>
       </li>
       <li class="commercial">
-        <a href="#">Commercial works</a>
+        <a href="comingsoon.html">Commercial works</a>
       </li>
       <li class="weddings">
-        <a href="#">Weddings</a>
+        <a href="comingsoon.html">Weddings</a>
       </li>
       <li class="fashion">
-        <a href="#">fashion</a>
+        <a href="comingsoon.html">fashion</a>
       </li>
       <li class="fine-art">
-        <a href="#">Fine Art</a>
+        <a href="comingsoon.html">Fine Art</a>
       </li>
     </ul>
   </header>
@@ -68,13 +71,15 @@
   <main>
     <section id="about" class="about-section">
       <section class="about-section-wrapper">
+        <div></div> <!-- for the image only visible on smaller screens -->
         <h1>BEAUTIFUL MIND</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eius sapiente cumque necessitatibus similique nulla asperiores adipisci magnam quo repellat facilis quaerat enim quis tempore, libero veritatis impedit minima? Dolorem!</p>
       </section>
     </section>
     <!--  -->
     <section id="services" class="section">
-      <h1 class="section-title">WHAT I CAN DO FOR YOU</h1>
+      <h1 class="section-title">services</h1>
+      <p class="section-description">Below is a list of serivices i can offer you</p>
       <article class="services-list">
         <section class="service-1 service-item">
           <img src="https://img.icons8.com/dusk/64/000000/portrait.png" alt="" class="service-icon">
@@ -84,7 +89,7 @@
 
         <section class="service-2 service-item">
           <img src="https://img.icons8.com/dusk/64/000000/wedding-gift.png" alt="" class="service-icon">
-          <h2 class="service-name">Weddings</h2>
+          <h2 class="service-name">Weddings and Fashion</h2>
           <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam aut eaque fugit nam adipisci, at voluptas error quidem laborum Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, reprehenderit!.</p>
         </section>
 
@@ -96,28 +101,242 @@
 
         <section class="service-4 service-item">
           <img src="https://img.icons8.com/office/64/000000/restaurant-pickup.png" alt="" class="service-icon">
-          <h2 class="service-name">Another Service, maybe</h2>
+          <h2 class="service-name">and more services</h2>
           <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam aut eaque fugit nam adipisci, at voluptas error quidem laborum Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, reprehenderit!.</p>
         </section>
       </article>
+
     </section>
     <!--  -->
     <section id="recents" class="section">
-      <h1 class="section-title">RECENTS FROM INSTAGRAM</h1>
+      <h1 class="section-title">RECENTS</h1>
+      <p class="section-description">Below are some of the recent pictures from my instagram</p>
       <article class="recents-pictures">
-        <img src="prosper/image-1.jpg" alt="">
-        <img src="prosper/image-3.jpg" alt="">
-        <img src="prosper/photo-1.jpg" alt="">
-        <img src="prosper/photo-2.jpg" alt="">
+        <img src="low-1.jpg" alt="">
+        <img src="low-3.jpg" alt="">
+        <img src="low-13.jpg" alt="">
+        <img src="low-7.jpg" alt="">
       </article>
+
     </section>
     <!--  -->
     <section id="testimonials" class="section">
       <h1 class="section-title">TESTIMONIALS</h1>
+      <p class="section-description">what some people have to say about working with me</p>
+
+      <article class="testimonials-list">
+        <section class="testimonial-item">
+          <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati optio facere aspernatur in architecto omnis laborum sit, nostrum animi."</p>
+          <div class="about-the-testimonial">
+            <div><img src="low-4.jpg" alt=""></div>
+            <p>
+              <span>somebody's name(Model)</span>
+              <span>Instagram@the_person's_handle</span>
+            </p>
+          </div>
+        </section>
+
+        <section class="testimonial-item">
+          <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati optio facere aspernatur in architecto omnis laborum sit, nostrum animi."</p>
+          <div class="about-the-testimonial">
+            <div><img src="low-10.jpg" alt=""></div>
+            <p>
+              <span>somebody's name(Model)</span>
+              <span>Instagram@the_person's_handle</span>
+            </p>
+          </div>
+        </section>
+
+        <section class="testimonial-item">
+          <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati optio facere aspernatur in architecto omnis laborum sit, nostrum animi."</p>
+          <div class="about-the-testimonial">
+            <div><img src="low-13.jpg" alt=""></div>
+            <p>
+              <span>somebody's name(Model)</span>
+              <span>Instagram@the_person's_handle</span>
+            </p>
+          </div>
+        </section>
+
+        <section class="testimonial-item">
+          <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati optio facere aspernatur in architecto omnis laborum sit, nostrum animi."</p>
+          <div class="about-the-testimonial">
+            <div><img src="low-9.jpg" alt=""></div>
+            <p>
+              <span>somebody's name(Model)</span>
+              <span>Instagram@the_person's_handle</span>
+            </p>
+          </div>
+        </section>
+      </article>
+
     </section>
     <!--  -->
     <section id="contacts" class="section">
-      <h1 class="section-title">BOOK A SESSION</h1>
+      <h1 class="section-title">Contacts</h1>
+      <p class="section-description">You can get through to me on <span>instagram@your_instagram_handle</span> or on <span>twitter@your_twitter_handle</span> or better still fill the form below to book a session</p>
+      <form id="book-session" class="book-session">
+        <!-- The first section of the form -->
+        <div class="book-session-div">
+
+          <!-- user name -->
+          <label for="user-name">
+            <span>YOUR NAME *</span>
+            <input type="text" id="user-name" class="user-name" required>
+          </label>
+
+          <!-- user number -->
+          <label for="user-number">
+            <span>PHONE NUMBER *</span>
+            <input type="number" id="user-number" class="user-number" required>
+          </label>
+
+          <!-- user email -->
+          <label for="user-email">
+            <span>EMAIL ADDRESS *</span>
+            <input type="email" id="user-email" class="user-email" required>
+          </label>
+
+          <!-- Who is the shoot for? -->
+          <label for="for-user-or-not">
+            <span>IS THE SHOOT FOR YOU OR SOMEONE ELSE? *</span>
+            <input type="text" id="for-user-or-not" class="for-user-or-not" required>
+          </label>
+
+          <!-- what type of session are you looking to have -->
+          <p class="desc-type-of-session">WHAT TYPE OF SESSION ARE YOU LOOKING TO HAVE? *</p>
+          <label for="birthday">
+            <input type="radio" id="birthday" class="birthday" name="type-of-session" required>
+            <span>Birthday</span>
+          </label>
+
+          <label for="beauty">
+            <input type="radio" id="beauty" class="beauty" name="type-of-session" required>
+            <span>Beauty</span>
+          </label>
+
+          <label for="call-to-bar">
+            <input type="radio" id="call-to-bar" class="call-to-bar" name="type-of-session" required>
+            <span>Call to Bar</span>
+          </label>
+
+          <label for="corporate-headshot">
+            <input type="radio" id="corporate-headshot" class="corporate-headshot" name="type-of-session" required>
+            <span>Corporate Headshot</span>
+          </label>
+
+          <label for="family">
+            <input type="radio" id="family" class="family" name="type-of-session" required>
+            <span>Family</span>
+          </label>
+
+          <label for="fashion">
+            <input type="radio" id="fashion" class="fashion" name="type-of-session" required>
+            <span>Fashion</span>
+          </label>
+
+          <label for="product-shoot">
+            <input type="radio" id="product-shoot" class="product-shoot" name="type-of-session" required>
+            <span>Product Shoot</span>
+          </label>
+
+          <label for="maternity">
+            <input type="radio" id="maternity" class="maternity" name="type-of-session" required>
+            <span>Maternity</span>
+          </label>
+
+          <label for="wedding">
+            <input type="radio" id="wedding" class="wedding" name="type-of-session" required>
+            <span>Wedding</span>
+          </label>
+
+          <!-- How may outfits -->
+          <p class="desc-num-of-outfit">HOW MANY OUTFITS DO YOU PLAN TO WEAR? *</p>
+          <label for="one-outfit">
+            <input type="radio" id="one-outfit" class="one-outfit" name="num-of-outfit" required>
+            <span>1</span>
+          </label>
+
+          <label for="two-outfit">
+            <input type="radio" id="two-outfit" class="two-outfit" name="num-of-outfit" required>
+            <span>2</span>
+          </label>
+
+          <label for="three-outfit">
+            <input type="radio" id="three-outfit" class="three-outfit" name="num-of-outfit" required>
+            <span>3</span>
+          </label>
+
+          <label for="four-outfit">
+            <input type="radio" id="four-outfit" class="four-outfit" name="num-of-outfit" required>
+            <span>4 or more</span>
+          </label>
+
+          <!-- More than 4 outfits -->
+          <label for="more-outfit">
+            <span>IF MORE THAN 4 OUTFITS, STATE THE NUMBER</span>
+            <input type="text" id="more-outfit" class="more-outfit">
+          </label>
+
+          <!-- Number of people to be photographed -->
+          <p class="desc-num-of-photographed">HOW MANY PEOPLE ARE BEING PHOTOGRAPHED *</p>
+          <label for="one-person">
+            <input type="radio" id="one-person" class="one-person" name="num-of-photographed" required>
+            <span>1</span>
+          </label>
+
+          <label for="two-person">
+            <input type="radio" id="two-person" class="two-person" name="num-of-photographed" required>
+            <span>2</span>
+          </label>
+
+          <label for="three-person">
+            <input type="radio" id="three-person" class="three-person" name="num-of-photographed" required>
+            <span>3 or more</span>
+          </label>
+
+          <!-- Desired shoot date -->
+          <label for="shoot-date">
+            <span>DESIRED SHOOT DATE *</span>
+            <input type="text" id="shoot-date" class="shoot-date">
+          </label>
+
+          <!-- Location for shoot -->
+          <label for="shoot-loko">
+            <span>WHERE WOULD YOU LIKE TO HAVE YOUR SHOOT? *</span>
+            <select id="shoot-loko">
+              <option value="studio">Studio</option>
+              <option value="outdoor">Outdoor</option>
+              <option value="on location">On location</option>
+            </select>
+          </label>
+
+          <!-- How you heard about us -->
+          <label for="where-info">
+            <span>HOW DID YOU HEAR ABOUT US? *</span>
+            <select id="where-info">
+              <option value="instagram">Instagram</option>
+              <option value="twitter">Twitter</option>
+              <option value="from a friend">From a friend</option>
+              <option value="others">Others</option>
+            </select>
+          </label>
+
+          <!-- instagram handle -->
+          <label for="instagram-handle">
+            <span>YOUR INSTAGRAM HANDLE</span>
+            <input type="text" id="instagram-handle" class="instagram-handle" required>
+          </label>
+
+          <!-- provision of deliverables -->
+          <label for="msg-pri-deliverables">
+            <span>MESSAGE *</span>
+            <textarea id="msg-pri-deliverables" cols="40" rows="5" placeholder="Provide a short description of your deliverables"></textarea>
+          </label>
+
+          <button class="send-msg">SEND MESSAGE</button>
+        </div>
+      </form>
     </section>
   </main>
   <!-- scripts -->

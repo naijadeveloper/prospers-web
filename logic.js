@@ -1,5 +1,4 @@
 // logic script for home page
-
 //
 const moreList = document.querySelector("li.more-list");
 const otherMenuLinks = document.querySelector("ul.other-menu-links");
@@ -8,10 +7,13 @@ const main = document.querySelector("main");
 //
 const pageHeader = document.querySelector(".page-header");
 const pageName = pageHeader.firstElementChild;
-const pageNameSpan = pageName.children;
+const pageNameSpan = pageName.querySelectorAll(".name-span");
 const menuList = pageName.nextElementSibling;
 //
 const menuListItems = document.querySelectorAll(".menu-list-item");
+//
+const openMenuIcon = pageName.querySelector(".show-menu");
+const closeMenuIcon = pageName.querySelector(".close-menu");
 //
 moreList.addEventListener("click", function(e) {
   e.preventDefault();
@@ -50,6 +52,9 @@ main.addEventListener("scroll", function(e) {
   //
 
   if(aboutTopVal === 0) {
+    //
+    window.location.hash === "#about" ? "" : history.pushState({}, "", "#about");
+    //
     menuListItems.forEach(function(item) {
       item.classList.remove("link-bg-style");
     })
@@ -61,18 +66,10 @@ main.addEventListener("scroll", function(e) {
     for(span of pageNameSpan) {
       span.classList.remove("name-span-change");
     }
-  } else {
+  } else if(aboutTopVal < 0) {
     //if changes already exist, dont add again
     //if not, then add
-    if(!pageHeader.classList.contains("page-header-change")
-      &&
-      !pageName.classList.contains("name-change")
-      &&
-      !menuList.classList.contains("menu-list-change")
-      &&
-      !pageNameSpan[0].classList.contains("name-span-change")
-      &&
-      !pageNameSpan[1].classList.contains("name-span-change")) {
+    if(!pageHeader.classList.contains("page-header-change")) {
         //
         pageHeader.classList.add("page-header-change");
         pageName.classList.add("name-change");
@@ -84,31 +81,56 @@ main.addEventListener("scroll", function(e) {
     }
   }
   //
-  if(servicesTopVal === 0) {
+  if(servicesTopVal <= 0 && servicesTopVal >= -300 && recentsTopVal > 0) {
+    //
+    window.location.hash === "#services" ? "" : history.pushState({}, "", "#services");
+    //
     menuListItems.forEach(function(item) {
       item.classList.remove("link-bg-style");
     })
     menuListItems[1].classList.add("link-bg-style");
   }
-
-  if(recentsTopVal === 0) {
+  else if(recentsTopVal <= 0 && recentsTopVal >= -300 && testimonialsTopVal > 0) {
+    //
+    window.location.hash === "#recents" ? "" : history.pushState({}, "", "#recents");
+    //
     menuListItems.forEach(function(item) {
       item.classList.remove("link-bg-style");
     })
     menuListItems[2].classList.add("link-bg-style");
   }
-
-  if(testimonialsTopVal === 0) {
+  else if(testimonialsTopVal <= 0 && testimonialsTopVal >= -300 && contactsTopVal > 0) {
+    //
+    window.location.hash === "#testimonials" ? "" : history.pushState({}, "", "#testimonials");
+    //
     menuListItems.forEach(function(item) {
       item.classList.remove("link-bg-style");
     })
     menuListItems[3].classList.add("link-bg-style");
-  }
-
-  if(contactsTopVal === 0) {
+  } 
+  else if(contactsTopVal <= 0) {
+    //
+    window.location.hash === "#contacts" ? "" : history.pushState({}, "", "#contacts");
+    //
     menuListItems.forEach(function(item) {
       item.classList.remove("link-bg-style");
     })
     menuListItems[4].classList.add("link-bg-style");
   }
+});
+
+
+// code for when the close and open menu icons appear on small screen sizes
+openMenuIcon.addEventListener("click", function () {
+  closeMenuIcon.style.display = "inline-block";
+  openMenuIcon.style.display = "none";
+  //
+  menuList.style.display = "flex";
+});
+//
+closeMenuIcon.addEventListener("click", function () {
+  openMenuIcon.style.display = "inline-block";
+  closeMenuIcon.style.display = "none";
+  //
+  menuList.style.display = "none";
 });
