@@ -66,12 +66,12 @@
   }
 
   .about-section-wrapper h1 {
-    width: 60%;
-    font-size: 50px;
+    width: 65%;
+    font-size: 45px;
   }
 
   .about-section-wrapper p {
-    width: 50%;
+    width: 55%;
     font-size: 22px;
   }
 
@@ -88,8 +88,6 @@
   /* PAGE-HEADER */
   .page-header, .page-header-change {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
 
     display: flex;
     flex-flow: column;
@@ -105,22 +103,23 @@
     margin-top: 30px;  
   }
 
-  .book-session-div {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .about-section-wrapper {
-    margin-top: 50px;  
-  }
-
   .about-section-wrapper h1 {
     width: 90%;
   }
 
   .about-section-wrapper p {
     width: 90%;
+  }
+
+  .book-session-div {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .about-section-wrapper {
+    margin-top: 50px;  
   }
 
   .section-title {
@@ -204,6 +203,10 @@
     font-size: 28px;
   }
 
+  .about-section-wrapper h1 {
+    font-size: 40px;
+  }
+
   .service-item, .recents-pictures img {
     width: 100%;
   }
@@ -238,6 +241,16 @@
 @media screen and (max-width: 420px) {
   .name, .name-change {
     font-size: 25px;
+  }
+
+  .about-section-wrapper h1 {
+    width: 95%;
+    font-size: 35px;
+  }
+
+  .about-section-wrapper p {
+    width: 95%;
+    font-size: 22px;
   }
 
   .section-description span {

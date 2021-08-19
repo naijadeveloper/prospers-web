@@ -35,9 +35,7 @@ body {
   left: 0;
   z-index: 1;
 
-  width: 97%;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
+  width: 100%;
 
   display: flex;
   justify-content: flex-end;
@@ -55,6 +53,8 @@ body {
 
     display: flex;
     flex-flow: column;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.6px;
 
     transform: translateY(-200px);
     animation: slide-down 1s 1s forwards;
@@ -161,6 +161,7 @@ body {
         margin: 5px;
 
         text-transform: uppercase;
+        text-align: center;
       }
 
       ul.other-menu-links li a:hover {
@@ -207,7 +208,7 @@ main {
 
 /*  ABOUT-SECTION */
   .about-section{
-    background-image: url("imisi-photo.jpg");
+    background-image: url("imgs/imisi-photo.jpg");
     background-repeat: no-repeat;
     background-position-y: -120px;
     background-attachment: fixed;
@@ -244,7 +245,7 @@ main {
         height: 220px;
         border-radius: 50%;
         border: 5px solid #eee;
-        background-image: url("imisi-photo.jpg");
+        background-image: url("imgs/imisi-photo.jpg");
         background-repeat: no-repeat;
         background-position-x: -200px;
         background-position-y: -60px;
@@ -253,8 +254,10 @@ main {
 
       .about-section-wrapper h1 {
         width: 40%;
-        font-size: 60px;
+        font-size: 55px;
         color: seagreen;
+        -webkit-text-stroke-color: #000;
+        -webkit-text-stroke-width: 0.6px;
       }
 
       .about-section-wrapper p {
@@ -281,6 +284,9 @@ main {
     color: seagreen;
 
     position: relative;
+
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.6px;
 
     /* border: 1px solid red; */
   }
@@ -339,6 +345,7 @@ main {
 
 .service-name {
   text-transform: uppercase;
+  text-align: center;
   font-weight: bolder;
   color: seagreen;
   /* border: 1px solid crimson; */
